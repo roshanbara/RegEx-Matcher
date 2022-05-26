@@ -1,6 +1,6 @@
 # RegEx-Matcher
 Matches the input string against<br>
-$ RegEx: ba^*b \: + \: a(bc)^* $
+$$\text{RegEx:} ba^{\star}b + a(bc)^{\star}$
 
 The NFA has been constructed using Glushkov's Algorithm (in this case is a DFA)
 $$e' = b_1 a_2^* b_3 \quad + \quad a_4 (b_5 c_6)^*$$
