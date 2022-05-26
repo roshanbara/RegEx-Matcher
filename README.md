@@ -1,5 +1,6 @@
 # RegEx-Matcher
-Matches the input string against $ ba^*b \; + \; a(bc)^* $
+Matches the input string against
+> $$ RegEx: \quad ba^*b \; + \; a(bc)^*$$
 
 The NFA has been constructed using Glushkov's Algorithm (in this case is a DFA)
 > $$e' = b_1 a_2^* b_3 \; + \; a_4 (b_5 c_6)^*$$
