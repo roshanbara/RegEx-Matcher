@@ -2,18 +2,25 @@ use std::process;
 use std::io;
 
 pub fn nfa(state: i32, strlang: String) {
+    // Rejects the non-matching string
     if strlang.len() == 0 && (state != 3 && state != 4 && state != 6) {
         println!("Last State {}", state);
         println!("String REJECTED!");
         process::exit(1);
     }
+
+    // Accepts the matching string
     if strlang.len() == 0 && (state == 3 || state == 4 || state == 6) {
         println!("Last State {}", state);
         println!("String ACCEPTED!");
         process::exit(1);
     }
+    // Extracting the next letter
     let alpha = strlang.chars().nth(0);
+
+    // Extracting the remaining string to be matched
     let substr = String::from(strlang.get(1..).unwrap());
+
     if state == 0 && alpha==Some('a') {
         println!("State {}", state);
         nfa(4, substr);
